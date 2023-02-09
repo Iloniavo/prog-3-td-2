@@ -76,7 +76,7 @@ class PlayerIntegrationTest {
     }
 
     @Test
-    void    update_players_ok() throws Exception {
+    void update_players_ok() throws Exception {
         Player toUpdate = Player.builder()
                 .id(2)
                 .name("Joe Doe")
@@ -111,7 +111,7 @@ class PlayerIntegrationTest {
                         .content(objectMapper.writeValueAsString(List.of(toUpdate)))
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept("application/json"))
-                .andExpect(status().is4xxClientError())
+                .andExpect(status().isMethodNotAllowed())
                 .andReturn()
                 .getResponse();
     }
