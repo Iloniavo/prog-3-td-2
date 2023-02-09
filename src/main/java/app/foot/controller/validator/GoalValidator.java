@@ -1,6 +1,6 @@
 package app.foot.controller.validator;
 
-import app.foot.controller.exception.BadRequestException;
+import app.foot.exception.BadRequestException;
 import app.foot.controller.rest.PlayerScorer;
 import org.springframework.stereotype.Component;
 

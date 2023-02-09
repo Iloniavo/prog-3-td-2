@@ -1,14 +1,11 @@
 package app.foot.service;
 
-import app.foot.controller.exception.NotFoundException;
+import app.foot.exception.NotFoundException;
 import app.foot.model.Match;
 import app.foot.model.PlayerScorer;
 import app.foot.repository.MatchRepository;
-import app.foot.repository.entity.MatchEntity;
 import app.foot.repository.mapper.MatchMapper;
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
