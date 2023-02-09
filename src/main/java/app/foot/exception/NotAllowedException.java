@@ -1,13 +1,12 @@
-package app.foot.controller.exception;
+package app.foot.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
-public class NotAllowedException extends RuntimeException{
+public class NotAllowedException extends ApiException{
 
     public NotAllowedException(String message){
-        super(message);
+        super(HttpStatus.METHOD_NOT_ALLOWED.value(),  message);
     }
 
 }

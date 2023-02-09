@@ -38,6 +38,7 @@ public class MatchController extends BaseController {
         List<app.foot.model.PlayerScorer> scorerList = scorers.stream()
                 .map(scorerMapper::toDomain)
                 .toList();
-        return mapper.toRest(service.addGoals(matchId, scorerList));
+         service.addGoals(matchId, scorerList);
+         return mapper.toRest(service.getMatchById(matchId));
     }
 }

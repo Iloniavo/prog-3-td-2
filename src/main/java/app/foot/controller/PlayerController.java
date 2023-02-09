@@ -1,6 +1,6 @@
 package app.foot.controller;
 
-import app.foot.controller.exception.NotAllowedException;
+import app.foot.exception.NotAllowedException;
 import app.foot.controller.rest.Player;
 import app.foot.controller.rest.mapper.PlayerRestMapper;
 import app.foot.service.PlayerService;
@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @AllArgsConstructor
-public class PlayerController {
+public class PlayerController extends BaseController{
     private final PlayerRestMapper mapper;
     private final PlayerService service;
 
